@@ -2,7 +2,7 @@
 
 namespace APICEP\Model;
 
-use APICEP\DAO\EnderecoDAO;
+use ApiCep\DAO\EnderecoDAO;
 use ApiCep\Model\Model;
 
 class CidadeModel extends Model
