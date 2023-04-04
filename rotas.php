@@ -7,20 +7,24 @@ $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 switch ($url)
 {
     
-    case '\endereco\by-cep':
+    case '/endereco/by-cep':
         EnderecoController::getLogradouroByCep();
     break;
 
-     case '\logradouro\by-bairro':
+     case '/logradouro/by-bairro':
         EnderecoController::getLogradouroByBairroAndCidade();
     break;
 
-    case '\cidade\by-uf':
+    case '/cidade/by-uf':
         EnderecoController::getCidadesByUf();
     break;
 
-    case '\bairro\by-cidade':
+    case '/bairro/by-cidade':
         EnderecoController::getBairrosByIdCidade();
+    break;
+
+    case '/cep/by-logradouro';
+        EnderecoController::getCepByLogradouro();
     break;
 
     default:
